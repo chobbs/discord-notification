@@ -1,43 +1,30 @@
-# rundeck-discord-webhook-plugin
-======================================
+# Rundeck Discord Notification Plugin
 
-> Disclaimer: This repo is under development and is NOT intended for a production environment.
+Sends rundeck notification messages to a discord channel. This plugin is based on [rundeck-slack-plugin](https://github.com/bitplaces/rundeck-slack-plugin)
 
-Description 
--------------------------
+## Build / Deploy
 
-Sends rundeck notification messages to a discord channel.  This plugin  is based on [rundeck-slack-plugin](https://github.com/bitplaces/rundeck-slack-plugin)
-
-Installation Instructions
--------------------------
-
-See the [Included Plugins | Rundeck Documentation](http://rundeck.org/docs/plugins-user-guide/installing.html#included-plugins "Included Plugins") for more information on installing rundeck plugins.
-
-## Download jarfile
-
-1. Download jarfile from [releases](https://github.com/rundeckpro/plugin-webhook-discord/releases/tag/v0.1.0)
-2. copy jarfile to `$RDECK_BASE/libext`
-
-## Build
-
-1. build the source by gradle.
-2. copy jarfile to `$RDECK_BASE/libext`
+- To build the project from source, issue: `./gradlew clean build`
+- The resulting jar files can be found under `build/libs`. 
+- Copy the `discord-notification-<version>.jar` file to your `$RDECK_BASE/libext` folder
+- Restart Rundeck
+- You should now have an additional "Discord Plugin" option when configuring notifications
 
 ## Configuration
-This plugin uses Discord incoming-webhooks. Create a new webhook and copy the provided url.
+This plugin uses Discord incoming-webhooks. Create a new webhook and copy the provided configuration attrinutes.
 
-![configuration](config.png)
+![configuration](configA.png)
 
-The only required configuration settings are:
+Required configuration settings:
 
-- `Token`: the secure token of the webhook
-- `Channel_ID`: the channel id this webhook is for, if any
+- [token](https://discord.com/developers/docs/resources/webhook): the secure token of the webhook
+- [webhookId](https://discord.com/developers/docs/resources/webhook): the id of the webhook
 
 
-## Contact
+## Contributors
 
-Provide a way for users to get in touch with you if they have questions or need help using your package. What information you give is up to you, but we encourage providing those below.
-
-- Author: Craig Hobbs
-- Email: chobbs@pagerduty.com
-- Github: [@chobbs](https://github.com/chobbs)
+*  Original [bitplaces/rundeck-slack-plugin](https://github.com/bitplaces/rundeck-slack-plugin) authors
+    *  @totallyunknown
+    *  @notandy
+    *  @lusis
+*  @chobbs

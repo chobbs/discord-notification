@@ -29,7 +29,7 @@ import freemarker.template.TemplateException;
 
 
 @Plugin(service= "Notification", name="DiscordNotification")
-@PluginDescription(title="Discord Pligin", description="Post Rundeck Notifications to Discord")
+@PluginDescription(title="Discord Notification", description="Post Rundeck Notifications to Discord Channel")
 public class DiscordNotificationPlugin implements NotificationPlugin {
 
     private static final String DISCORD_MESSAGE_COLOR_GREEN = "65280";
@@ -55,13 +55,13 @@ public class DiscordNotificationPlugin implements NotificationPlugin {
     private String webhook_base_url;
 
     @Password
-    @PluginProperty(title = "Token",
-                    description = "Webhook Token, something like C00000000_B00000000_XXXXXXXXXXXXXXXXXXXXXXXX",
+    @PluginProperty(title = "token",
+                    description = "Secure token of the webhook, ex. C00000000_B00000000_XXXXXXXXXXX",
                     scope=PropertyScope.Instance)
     private String webhook_token;
 
-    @PluginProperty(title = "Channel_ID",
-                    description = "Channel_id of the webhook",
+    @PluginProperty(title = "webhookId",
+                    description = "The id of the webhook, ex. 1234567890",
                     scope=PropertyScope.Instance)
     private String webhook_id;
 

@@ -1,4 +1,5 @@
 discord.code-workspace 
+.vscode
 *.iml
 target
 build
