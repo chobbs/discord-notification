@@ -1,0 +1,6 @@
+discord.code-workspace 
+*.iml
+target
+build
+.gradle
+classes
