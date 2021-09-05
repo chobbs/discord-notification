@@ -8,12 +8,12 @@ Sends rundeck notification messages to a discord channel. This plugin is based o
 - The resulting jar files can be found under `build/libs`. 
 - Copy the `discord-notification-<version>.jar` file to your `$RDECK_BASE/libext` folder
 - Restart Rundeck
-- You should now have an additional "Discord Plugin" option when configuring notifications
+- You should now have an additional "Discord Notification" option when configuring notifications
 
 ## Configuration
 This plugin uses Discord incoming-webhooks. Create a new webhook and copy the provided configuration attrinutes.
 
-![configuration](configA.png)
+![configuration](config.png)
 
 Required configuration settings:
 
